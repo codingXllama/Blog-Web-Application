@@ -1,20 +1,6 @@
 <!-- This is the child template of the parent template which is 'BaseLayout.html' -->
 {%extends "BaseLayout.html"%}
-
-
-<!-- using a code block -- jinja syntax to display the content for the posts made
-    inside the userPosts list in  the blog_app.py -->
-<!-- Using a for loop to itterate through each post made with in the userPosts List -->
-
-<!-- Storing all the content with the content block,
-    which must be the same name of the content block in the BaseLayout.html
--->
-
 {%block content%}
-{% for post in posts %}
-<h1>{{post.title}}</h1>
-<p>Posted By: {{post.User}} on {{post.postDate}}</p>
-<p>{{post.content}}</p>
-<!-- Ending the for loop -->
-{% endfor %}
+<h1 style="text-align: center; color:rgb(53, 53, 53); text-transform:uppercase;
+">About</h1>
 {%endblock content%}
