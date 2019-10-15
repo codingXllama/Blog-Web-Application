@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/templates/">
+    <title>Welcome Home</title>
+</head>
+
+<body>
+
+    <!-- using a code block -- jinja syntax to display the content for the posts made
+    inside the userPosts list in  the blog_app.py -->
+
+    <!-- Using a for loop to itterate through each post made with in the userPosts List -->
+    <div class="content">
+        {% for post in posts %}
+        <h1>{{post.title}}</h1>
+        <p>Posted By: {{post.User}} on {{post.postDate}}</p>
+        <p>{{post.content}}</p>
+        <!-- Ending the for loop -->
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
