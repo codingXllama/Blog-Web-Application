@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- This is the child template of the parent template which is 'BaseLayout.html' -->
+{%extends "BaseLayout.html"%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% if title %}
-    <title>{{title}} Chill Zone</title>
-    {% else %}
-    <title>About</title>
-    {%endif%}
-</head>
 
-<body>
+<!-- using a code block -- jinja syntax to display the content for the posts made
+    inside the userPosts list in  the blog_app.py -->
+<!-- Using a for loop to itterate through each post made with in the userPosts List -->
 
-</body>
+<!-- Storing all the content with the content block,
+    which must be the same name of the content block in the BaseLayout.html
+-->
 
-</html>
+{%block content%}
+{% for post in posts %}
+<h1>{{post.title}}</h1>
+<p>Posted By: {{post.User}} on {{post.postDate}}</p>
+<p>{{post.content}}</p>
+<!-- Ending the for loop -->
+{% endfor %}
+{%endblock content%}

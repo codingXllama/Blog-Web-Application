@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/templates/">
+
+    <!-- Creating a dynamic title, that display a tile of the app and the page type according to the title passed to it -->
+    {% if title%}
+    <!-- The title when a title is passed to the render_templated() -->
+    <title>Chill Zone {{tile}}</title>
+    {%else %}
+    <!-- The default title if no title is provided -->
+    <title>Chill Zone</title>
+    {%endif%}
+</head>
+
+<body>
+
+    <!-- Creating a block called "content" -->
+    {%block content%}
+
+    <!-- End of the content block -->
+    {% endblock %}
+
+</body>
+
+</html>
